@@ -14,4 +14,15 @@ grant api to current_user; -- this is a workaround for RDS where the master user
 \ir ../libs/auth/api/all.sql
 
 -- our endpoints
-\ir todos.sql
+\ir camaras.sql
+\ir categoriascontaminantes.sql
+\ir contaminates.sql
+\ir diasimportantes.sql
+\ir diassemana.sql
+\ir estacionesdelanio.sql
+\ir estacionesdelared.sql
+\ir fechas.sql
+\ir horas.sql
+\ir industrias.sql
+\ir metodos.sql
+\ir temperaturaexterna.sql

@@ -11,4 +11,15 @@ set search_path = data, public;
 \ir ../libs/auth/data/user.sql
 
 -- import our application models
-\ir todo.sql
+\ir camaras.sql
+\ir categoriascontaminantes.sql
+\ir contaminates.sql
+\ir diasimportantes.sql
+\ir diassemana.sql
+\ir estacionesdelanio.sql
+\ir estacionesdelared.sql
+\ir fechas.sql
+\ir horas.sql
+\ir industrias.sql
+\ir metodos.sql
+\ir temperaturaexterna.sql
