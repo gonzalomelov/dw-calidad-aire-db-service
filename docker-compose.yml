@@ -53,6 +53,8 @@ services:
       - PGRST_SERVER_PROXY_URI=${SERVER_PROXY_URI}
     depends_on:
       - db
+    networks:
+      - postgres
     restart: always
 
   # OpenResty (Nginx + Lua) instance that sits in front of PostgREST.
@@ -87,6 +89,8 @@ services:
       - "./openresty/lualib/user_code:/usr/local/openresty/lualib/user_code"
     depends_on:
       - postgrest
+    networks:
+      - postgres
     restart: always
 
   # pg-amqp-bridge instance is responsible for forwarding NOTIFY events in PostgreSQL
@@ -103,6 +107,8 @@ services:
       - BRIDGE_CHANNELS=events:amq.topic
     depends_on:
       - db
+    networks:
+      - postgres
     restart: always
 
   # RabbitMQ instance can be used to consolidate events that originated in your database/application.
@@ -116,6 +122,8 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    networks:
+      - postgres
     restart: always
 
   pgadmin:
