@@ -49,7 +49,7 @@ select settings.set('auth.default-role', 'webuser');
 
 \ir authorization/camaras.sql
 \ir authorization/categoriascontaminantes.sql
-\ir authorization/contaminates.sql
+\ir authorization/contaminantes.sql
 \ir authorization/diasimportantes.sql
 \ir authorization/diassemana.sql
 \ir authorization/estacionesdelanio.sql

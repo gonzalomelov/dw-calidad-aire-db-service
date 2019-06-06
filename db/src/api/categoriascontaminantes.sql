@@ -1,8 +1,8 @@
--- View: api.categoriascontaminantes
+-- View: categoriascontaminantes
 
--- DROP VIEW api.categoriascontaminantes;
+-- DROP VIEW categoriascontaminantes;
 
-CREATE OR REPLACE VIEW api.categoriascontaminantes AS 
+CREATE OR REPLACE VIEW categoriascontaminantes AS 
  SELECT categoriascontaminantes.id,
 
     categoriascontaminantes.valor,
@@ -12,4 +12,4 @@ CREATE OR REPLACE VIEW api.categoriascontaminantes AS
 
     categoriascontaminantes.private,
     categoriascontaminantes.owner_id = request.user_id() AS mine
-   FROM categoriascontaminantes;
+   FROM data.categoriascontaminantes;

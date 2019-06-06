@@ -1,8 +1,8 @@
--- View: api.contaminantes
+-- View: contaminantes
 
--- DROP VIEW api.contaminantes;
+-- DROP VIEW contaminantes;
 
-CREATE OR REPLACE VIEW api.contaminantes AS 
+CREATE OR REPLACE VIEW contaminantes AS 
  SELECT contaminantes.id,
 
     contaminantes.idcontaminante,
@@ -19,4 +19,4 @@ CREATE OR REPLACE VIEW api.contaminantes AS
 
     contaminantes.private,
     contaminantes.owner_id = request.user_id() AS mine
-   FROM contaminantes;
+   FROM data.contaminantes;

@@ -1,8 +1,8 @@
--- View: api.temperaturaexterna
+-- View: temperaturaexterna
 
--- DROP VIEW api.temperaturaexterna;
+-- DROP VIEW temperaturaexterna;
 
-CREATE OR REPLACE VIEW api.temperaturaexterna AS 
+CREATE OR REPLACE VIEW temperaturaexterna AS 
  SELECT temperaturaexterna.id,
 
     temperaturaexterna.valorenc,
@@ -11,4 +11,4 @@ CREATE OR REPLACE VIEW api.temperaturaexterna AS
 
     temperaturaexterna.private,
     temperaturaexterna.owner_id = request.user_id() AS mine
-   FROM temperaturaexterna;
+   FROM data.temperaturaexterna;

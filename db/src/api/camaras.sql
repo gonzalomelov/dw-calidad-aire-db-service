@@ -1,8 +1,8 @@
--- View: api.camaras
+-- View: camaras
 
--- DROP VIEW api.camaras;
+-- DROP VIEW camaras;
 
-CREATE OR REPLACE VIEW api.camaras AS 
+CREATE OR REPLACE VIEW camaras AS 
  SELECT camaras.id,
 
     camaras.iddetector,
@@ -15,4 +15,4 @@ CREATE OR REPLACE VIEW api.camaras AS
 
     camaras.private,
     camaras.owner_id = request.user_id() AS mine
-   FROM camaras;
+   FROM data.camaras;

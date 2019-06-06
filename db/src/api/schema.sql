@@ -15,8 +15,8 @@ grant api to current_user; -- this is a workaround for RDS where the master user
 
 -- our endpoints
 \ir camaras.sql
+\ir contaminantes.sql
 \ir categoriascontaminantes.sql
-\ir contaminates.sql
 \ir diasimportantes.sql
 \ir diassemana.sql
 \ir estacionesdelanio.sql

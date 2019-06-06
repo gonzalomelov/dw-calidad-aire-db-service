@@ -1,8 +1,8 @@
--- View: api.industrias
+-- View: industrias
 
--- DROP VIEW api.industrias;
+-- DROP VIEW industrias;
 
-CREATE OR REPLACE VIEW api.industrias AS 
+CREATE OR REPLACE VIEW industrias AS 
  SELECT industrias.id,
 
     industrias.idindustria,
@@ -11,4 +11,4 @@ CREATE OR REPLACE VIEW api.industrias AS
 
     industrias.private,
     industrias.owner_id = request.user_id() AS mine
-   FROM industrias;
+   FROM data.industrias;

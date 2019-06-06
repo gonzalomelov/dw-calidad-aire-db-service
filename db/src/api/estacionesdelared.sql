@@ -1,8 +1,8 @@
--- View: api.estacionesdelared
+-- View: estacionesdelared
 
--- DROP VIEW api.estacionesdelared;
+-- DROP VIEW estacionesdelared;
 
-CREATE OR REPLACE VIEW api.estacionesdelared AS 
+CREATE OR REPLACE VIEW estacionesdelared AS 
  SELECT estacionesdelared.id,
 
     estacionesdelared.idestaciondelared,
@@ -15,4 +15,4 @@ CREATE OR REPLACE VIEW api.estacionesdelared AS
 
     estacionesdelared.private,
     estacionesdelared.owner_id = request.user_id() AS mine
-   FROM estacionesdelared;
+   FROM data.estacionesdelared;

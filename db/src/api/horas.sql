@@ -1,8 +1,8 @@
--- View: api.horas
+-- View: horas
 
--- DROP VIEW api.horas;
+-- DROP VIEW horas;
 
-CREATE OR REPLACE VIEW api.horas AS 
+CREATE OR REPLACE VIEW horas AS 
  SELECT horas.id,
 
     horas.idhora,
@@ -12,4 +12,4 @@ CREATE OR REPLACE VIEW api.horas AS
 
     horas.private,
     horas.owner_id = request.user_id() AS mine
-   FROM horas;
+   FROM data.horas;

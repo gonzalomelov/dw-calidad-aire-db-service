@@ -18,7 +18,7 @@ CREATE TABLE data.categoriascontaminantes
   id integer NOT NULL DEFAULT nextval('categoriascontaminantes_id_seq'::regclass),
 
   valor INT,
-  idContaminante INT REFERENCES api.contaminantes,
+  idContaminante INT REFERENCES data.contaminantes,
   idRangoContaminantesCategorias INT,
   descRangoContaminantesCategorias VARCHAR(10),
 

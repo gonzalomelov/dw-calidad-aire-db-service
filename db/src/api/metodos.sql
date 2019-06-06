@@ -1,8 +1,8 @@
--- View: api.metodos
+-- View: metodos
 
--- DROP VIEW api.metodos;
+-- DROP VIEW metodos;
 
-CREATE OR REPLACE VIEW api.metodos AS 
+CREATE OR REPLACE VIEW metodos AS 
  SELECT metodos.id,
 
     metodos.idmetodo,
@@ -10,4 +10,4 @@ CREATE OR REPLACE VIEW api.metodos AS
 
     metodos.private,
     metodos.owner_id = request.user_id() AS mine
-   FROM metodos;
+   FROM data.metodos;

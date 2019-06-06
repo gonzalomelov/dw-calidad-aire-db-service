@@ -1,8 +1,8 @@
--- View: api.diassemana
+-- View: diassemana
 
--- DROP VIEW api.diassemana;
+-- DROP VIEW diassemana;
 
-CREATE OR REPLACE VIEW api.diassemana AS 
+CREATE OR REPLACE VIEW diassemana AS 
  SELECT diassemana.id,
 
     diassemana.iddiasemana,
@@ -10,4 +10,4 @@ CREATE OR REPLACE VIEW api.diassemana AS
 
     diassemana.private,
     diassemana.owner_id = request.user_id() AS mine
-   FROM diassemana;
+   FROM data.diassemana;

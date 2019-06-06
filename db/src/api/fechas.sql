@@ -1,8 +1,8 @@
--- View: api.fechas
+-- View: fechas
 
--- DROP VIEW api.fechas;
+-- DROP VIEW fechas;
 
-CREATE OR REPLACE VIEW api.fechas AS 
+CREATE OR REPLACE VIEW fechas AS 
  SELECT fechas.id,
 
     fechas.idfecha,
@@ -15,4 +15,4 @@ CREATE OR REPLACE VIEW api.fechas AS
 
     fechas.private,
     fechas.owner_id = request.user_id() AS mine
-   FROM fechas;
+   FROM data.fechas;

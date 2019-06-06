@@ -1,8 +1,8 @@
--- View: api.diasImportantes
+-- View: diasImportantes
 
--- DROP VIEW api.diasImportantes;
+-- DROP VIEW diasImportantes;
 
-CREATE OR REPLACE VIEW api.diasImportantes AS 
+CREATE OR REPLACE VIEW diasImportantes AS 
  SELECT diasImportantes.id,
 
     diasImportantes.iddiaimportante,
@@ -14,4 +14,4 @@ CREATE OR REPLACE VIEW api.diasImportantes AS
 
     diasImportantes.private,
     diasImportantes.owner_id = request.user_id() AS mine
-   FROM diasImportantes;
+   FROM data.diasImportantes;
