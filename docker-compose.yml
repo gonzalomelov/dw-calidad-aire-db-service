@@ -26,7 +26,13 @@ services:
       - DEVELOPMENT=${DEVELOPMENT}
       - JWT_SECRET=${JWT_SECRET}
     volumes:
-      - "./db/src:/docker-entrypoint-initdb.d"
+      - "./db/src/api:/docker-entrypoint-initdb.d/api"
+      - "./db/src/authorization:/docker-entrypoint-initdb.d/authorization"
+      - "./db/src/data:/docker-entrypoint-initdb.d/data"
+      - "./db/src/libs:/docker-entrypoint-initdb.d/libs"
+      - "./db/src/sample_data:/docker-entrypoint-initdb.d/sample_data"
+      - "./db/src/init.sh:/docker-entrypoint-initdb.d/init.sh"
+      - "./db/src/init.sql:/docker-entrypoint-initdb.d/winit.sql"
       - "./data:/var/lib/postgresql/data"
     networks:
       - postgres
