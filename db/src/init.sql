@@ -60,8 +60,8 @@ select settings.set('auth.default-role', 'webuser');
 \ir authorization/metodos.sql
 \ir authorization/temperaturaexterna.sql
 
--- \echo # Loading sample data
--- \ir sample_data/data.sql
+\echo # Loading sample data
+\ir sample_data/data.sql
 
 
 commit;
