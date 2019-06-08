@@ -48,7 +48,7 @@ select settings.set('auth.default-role', 'webuser');
 \ir authorization/privileges.sql
 
 \ir authorization/camaras.sql
-\ir authorization/categoriascontaminantes.sql
+\ir authorization/contaminantescategorias.sql
 \ir authorization/contaminantes.sql
 \ir authorization/diasimportantes.sql
 \ir authorization/diassemana.sql
@@ -63,6 +63,8 @@ select settings.set('auth.default-role', 'webuser');
 \echo # Loading sample data
 \ir sample_data/data.sql
 
+\echo # Loading data source
+\ir data_source/data.sql
 
 commit;
 \echo # ==========================================

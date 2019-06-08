@@ -13,7 +13,7 @@ set search_path = data, public;
 -- import our application models
 \ir camaras.sql
 \ir contaminantes.sql
-\ir categoriascontaminantes.sql
+\ir contaminantescategorias.sql
 \ir diasimportantes.sql
 \ir diassemana.sql
 \ir estacionesdelanio.sql

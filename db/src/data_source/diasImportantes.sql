@@ -1,0 +1,3 @@
+INSERT INTO data.diasImportantes(idDiaImportante, nomDiaImportante, idTipoDiaImportante, nomTipoDiaImportante, idFecha, idHora, private, owner_id) VALUES (0, 'No es día importante', 0, 'No es día importante', null, null, false, 1);
+INSERT INTO data.diasImportantes(idDiaImportante, nomDiaImportante, idTipoDiaImportante, nomTipoDiaImportante, idFecha, idHora, private, owner_id) VALUES (1, 'Uruguay y Portugal', 1, 'Mundial', 20180630, 15, false, 1);
+INSERT INTO data.diasImportantes(idDiaImportante, nomDiaImportante, idTipoDiaImportante, nomTipoDiaImportante, idFecha, idHora, private, owner_id) VALUES (2, '1ro de Mayo', 2, 'Fecha Patria', 20160501, 13, false, 1);

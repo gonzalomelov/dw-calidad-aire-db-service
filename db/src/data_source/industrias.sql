@@ -1,0 +1,1 @@
+INSERT INTO industrias (idIndustria, nomIndustria, ubicIndustria) VALUES (1, 'Central Batlle', ST_Transform(ST_GeomFromText('POINT (-56.1977450 -34.8842450)', 4326), 32721));

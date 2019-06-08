@@ -1,0 +1,10 @@
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (1, 'UYMVD_PM2_b', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (2, 'UYMVD_PM2_D', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (3, 'UYMVD_PM10_2', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (4, 'UYMVD_PM10_D', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (5, 'UYMVD_PM10_H', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (6, 'UYMVD_PTS', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (7, 'UYMVD_SO2_T', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (8, 'UYMVD_NO2_2', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (9, 'UYMVD_HN', false, 1);
+INSERT INTO data.metodos(idmetodo, nommetodo, private, owner_id) VALUES (10, 'UYMVD_O3', false, 1);
