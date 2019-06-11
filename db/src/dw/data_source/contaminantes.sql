@@ -1,0 +1,2 @@
+insert into dw.contaminantes(idcontaminante, nomcontaminante, idsubtipo, nomsubtipo, idtipo, nomtipo, muybuena, buena, aceptable, inadecuada, mala)
+select idcontaminante, nomcontaminante, idsubtipo, nomsubtipo, idtipo, nomtipo, muybuena, buena, aceptable, inadecuada, mala from data.contaminantes;

@@ -1,0 +1,2 @@
+insert into dw.estacionesDeLaRed(idEstacionDeLaRed, nomEstacionDeLaRed, idbarrio, nombarrio, idCCZ, nomCCZ, ubicEstacionDeLaRed)
+select idEstacionDeLaRed, nomEstacionDeLaRed, idbarrio, nombarrio, idCCZ, nomCCZ, ubicEstacionDeLaRed from data.estacionesDeLaRed;

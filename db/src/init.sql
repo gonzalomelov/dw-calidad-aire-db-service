@@ -41,7 +41,9 @@ select settings.set('auth.default-role', 'webuser');
 -- exposed as API endpoints. Access to them however is still governed by the 
 -- privileges defined for the current PostgreSQL role making the requests
 \ir api/schema.sql
-
+-- entities inside this schema  will be 
+-- used by the Data Warehouse
+\ir dw/schema.sql
 
 \echo # Loading roles and privilege settings
 \ir authorization/roles.sql
@@ -63,8 +65,11 @@ select settings.set('auth.default-role', 'webuser');
 \echo # Loading sample data
 \ir sample_data/data.sql
 
-\echo # Loading data source
-\ir data_source/data.sql
+\echo # Loading data sources
+\ir data/data_source/data.sql
+
+\echo # Loading dw as data sources
+\ir dw/data_source/data.sql
 
 commit;
 \echo # ==========================================

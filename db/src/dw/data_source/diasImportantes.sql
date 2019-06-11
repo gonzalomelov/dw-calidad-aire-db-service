@@ -1,0 +1,2 @@
+insert into dw.diasImportantes(idDiaImportante, nomDiaImportante, idTipoDiaImportante, nomTipoDiaImportante, idFecha, idHora)
+select idDiaImportante, nomDiaImportante, idTipoDiaImportante, nomTipoDiaImportante, idFecha, idHora from data.diasImportantes;
