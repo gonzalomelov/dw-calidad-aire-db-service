@@ -35,10 +35,10 @@ grant select, insert, update, delete on api.contaminantescategorias to webuser;
 grant select on api.contaminantescategorias to anonymous;
 -------------------------------------------------------------------------------
 
--- ALTER TABLE data.contaminantescategorias_id_seq
+-- ALTER TABLE data.contaminantescategorias
 --   OWNER TO superuser;
--- GRANT ALL ON SEQUENCE data.contaminantescategorias_id_seq TO superuser;
--- GRANT USAGE ON SEQUENCE data.contaminantescategorias_id_seq TO webuser;
+-- GRANT ALL ON SEQUENCE data.contaminantescategorias TO superuser;
+-- GRANT USAGE ON SEQUENCE data.contaminantescategorias TO webuser;
 
 -- ALTER TABLE data.contaminantescategorias
 --   OWNER TO superuser;
