@@ -17,7 +17,7 @@ CREATE TABLE data.contaminantes
 (
   id integer NOT NULL DEFAULT nextval('contaminantes_id_seq'::regclass),
 
-  idcontaminante int NOT NULL,
+  idcontaminante int NOT NULL UNIQUE,
   nomcontaminante varchar(4),
   idsubtipo int,
   nomsubtipo varchar(59),

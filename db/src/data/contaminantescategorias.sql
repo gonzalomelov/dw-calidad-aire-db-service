@@ -1,8 +1,8 @@
--- Sequence: data.contaminantescategorias
+-- Sequence: data.contaminantescategorias_id_seq
 
--- DROP SEQUENCE data.contaminantescategorias;
+-- DROP SEQUENCE data.contaminantescategorias_id_seq;
 
-CREATE SEQUENCE data.contaminantescategorias
+CREATE SEQUENCE data.contaminantescategorias_id_seq
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -15,10 +15,10 @@ CREATE SEQUENCE data.contaminantescategorias
 
 CREATE TABLE data.contaminantescategorias
 (
-  id integer NOT NULL DEFAULT nextval('contaminantescategorias'::regclass),
+  id integer NOT NULL DEFAULT nextval('contaminantescategorias_id_seq'::regclass),
 
   valor INT,
-  idContaminante INT REFERENCES data.contaminantes,
+  idContaminante INT,
   idRangoContaminantesCategorias INT,
   descRangoContaminantesCategorias VARCHAR(10),
 
@@ -27,6 +27,9 @@ CREATE TABLE data.contaminantescategorias
   CONSTRAINT contaminantescategorias_pkey PRIMARY KEY (id),
   CONSTRAINT contaminantescategorias_owner_id_fkey FOREIGN KEY (owner_id)
       REFERENCES data."user" (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT contaminantescategorias_contaminantes_fkey FOREIGN KEY (idContaminante)
+      REFERENCES data."contaminantes" (idcontaminante) MATCH SIMPLE
       ON UPDATE NO ACTION ON DELETE NO ACTION
 )
 WITH (
