@@ -1,3 +1,4 @@
+INSERT INTO data.horas(idHora, hora, idRangoHoras, descRangoHoras, private, owner_id) VALUES (-1, '-1', -1, '-1', false, 1);
 INSERT INTO data.horas(idHora, hora, idRangoHoras, descRangoHoras, private, owner_id) VALUES (00, '00', 0, 'Madrugada', false, 1);
 INSERT INTO data.horas(idHora, hora, idRangoHoras, descRangoHoras, private, owner_id) VALUES (01, '01', 0, 'Madrugada', false, 1);
 INSERT INTO data.horas(idHora, hora, idRangoHoras, descRangoHoras, private, owner_id) VALUES (02, '02', 0, 'Madrugada', false, 1);
