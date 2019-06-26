@@ -96,8 +96,6 @@ services:
       - postgrest
     network_mode: bridge
     restart: always
-    external_links:
-      - pdi-slave:pdi
 
   # pg-amqp-bridge instance is responsible for forwarding NOTIFY events in PostgreSQL
   # to RabbitMQ based on the BRIDGE_CHANNELS configuration
