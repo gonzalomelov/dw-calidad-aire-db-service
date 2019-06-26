@@ -70,7 +70,6 @@ services:
     image: openresty/openresty:jessie
     ports:
       - "8083:80"
-      - "9090:9090"
     links:
       - db:db
       - postgrest:postgrest
