@@ -10,3 +10,5 @@
 \ir estacionesDeLaRed.sql
 \ir diasImportantes.sql
 \ir industrias.sql
+
+\ir temperaturaexterna.sql
