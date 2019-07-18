@@ -44,6 +44,9 @@ select settings.set('auth.default-role', 'webuser');
 -- entities inside this schema  will be 
 -- used by the Data Warehouse
 \ir dw/schema.sql
+-- entities inside this schema  will be 
+-- used by the ETLs
+\ir staging/schema.sql
 
 \echo # Loading roles and privilege settings
 \ir authorization/roles.sql

@@ -30,6 +30,7 @@ services:
       - "./db/src/authorization:/docker-entrypoint-initdb.d/authorization"
       - "./db/src/data:/docker-entrypoint-initdb.d/data"
       - "./db/src/dw:/docker-entrypoint-initdb.d/dw"
+      - "./db/src/staging:/docker-entrypoint-initdb.d/staging"
       - "./db/src/libs:/docker-entrypoint-initdb.d/libs"
       - "./db/src/sample_data:/docker-entrypoint-initdb.d/sample_data"
       - "./db/src/init.sh:/docker-entrypoint-initdb.d/init.sh"
