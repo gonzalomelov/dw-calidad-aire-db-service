@@ -135,12 +135,28 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     volumes:
-       - pgadmin:/root/.pgadmin
-       - ./pgadmin4/servers.json:/pgadmin4/servers.json
+      - pgadmin:/root/.pgadmin
+      - ./pgadmin4/servers.json:/pgadmin4/servers.json
     ports:
       - "${PGADMIN_PORT}:80"
     network_mode: bridge
     restart: unless-stopped
+
+  dbbackup:
+    image: kartoza/pg-backup:${PG_VERSION}
+    hostname: pg-backups
+    volumes:
+      - ./backups:/backups
+    links:
+      - db:db
+    environment:
+      - DUMPPREFIX=PG_DWCALIDADAIRE
+      - POSTGRES_USER=superuser
+      - POSTGRES_PASS=superuserpass
+      - POSTGRES_PORT=5432
+      - POSTGRES_HOST=db
+      - POSTGRES_DBNAME=app
+    network_mode: bridge
 
 volumes:
     pgadmin:
