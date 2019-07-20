@@ -44,4 +44,4 @@ CREATE TRIGGER send_change_event
   AFTER INSERT OR UPDATE OR DELETE
   ON data.fechas
   FOR EACH ROW
-  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id","fecha"]}');
+  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id"]}');

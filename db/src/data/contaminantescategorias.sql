@@ -44,4 +44,4 @@ CREATE TRIGGER send_change_event
   AFTER INSERT OR UPDATE OR DELETE
   ON data.contaminantescategorias
   FOR EACH ROW
-  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id","nomcamara"]}');
+  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id"]}');

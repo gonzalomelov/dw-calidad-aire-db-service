@@ -43,4 +43,4 @@ CREATE TRIGGER send_change_event
   AFTER INSERT OR UPDATE OR DELETE
   ON data.diasimportantes
   FOR EACH ROW
-  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id","nomdiaimportante"]}');
+  EXECUTE PROCEDURE rabbitmq.on_row_change('{"include":["id"]}');
