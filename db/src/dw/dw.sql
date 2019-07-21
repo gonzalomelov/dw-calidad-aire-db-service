@@ -87,16 +87,17 @@ CREATE TABLE dw.fechas
 
 CREATE TABLE dw.estacionesDeLaRed
 (
-  idEstacionDeLaRed INT
-, nomEstacionDeLaRed VARCHAR(22)
+  nomEstacionDeLaRed VARCHAR(22)
 , ubicEstacionDeLaRed geometry(Geometry,32721)
+, descestaciondelared VARCHAR(25)
+, idestaciondelared VARCHAR(3)
 , idBarrio INT
 , nomBarrio VARCHAR(25)
 , idCCZ INT
 , nomCCZ VARCHAR(5)
-, PRIMARY KEY (idEstacionDeLaRed)
+, PRIMARY KEY (nomestaciondelared)
 )
-;CREATE INDEX idx_estacionesDeLaRed_idEstacionDeLaRed ON dw.estacionesDeLaRed(idEstacionDeLaRed)
+;CREATE INDEX idx_estacionesDeLaRed_nomestaciondelared ON dw.estacionesDeLaRed(nomestaciondelared)
 ;
 
 CREATE TABLE dw.metodos
@@ -233,7 +234,7 @@ CREATE TABLE dw.mediciones
 , idEstacionDelAnio INT REFERENCES dw.estacionesDelAnio
 , idDiaSemana INT REFERENCES dw.diasSemana
 , idFecha INT REFERENCES dw.fechas
-, idEstacionDeLaRed INT REFERENCES dw.estacionesDeLaRed
+, nomestaciondelared VARCHAR(22) REFERENCES dw.estacionesDeLaRed
 , idMetodo INT REFERENCES dw.metodos
 , idContaminante INT REFERENCES dw.contaminantes
 --, valorEnW_m2 INT REFERENCES dw.radiacionSolarGlobal
@@ -249,7 +250,7 @@ CREATE TABLE dw.mediciones
     , idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     --, valorEnW_m2
@@ -265,7 +266,7 @@ CREATE TABLE dw.mediciones
     , idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     -- , valorEnW_m2
@@ -279,7 +280,7 @@ CREATE TABLE dw.mediciones
 ;CREATE INDEX idx_mediciones_idEstacionDelAnio ON dw.mediciones(idEstacionDelAnio)
 ;CREATE INDEX idx_mediciones_idDiaSemana ON dw.mediciones(idDiaSemana)
 ;CREATE INDEX idx_mediciones_idFecha ON dw.mediciones(idFecha)
-;CREATE INDEX idx_mediciones_idEstacionDeLaRed ON dw.mediciones(idEstacionDeLaRed)
+;CREATE INDEX idx_mediciones_nomestaciondelared ON dw.mediciones(nomestaciondelared)
 ;CREATE INDEX idx_mediciones_idMetodo ON dw.mediciones(idMetodo)
 ;CREATE INDEX idx_mediciones_idContaminante ON dw.mediciones(idContaminante)
 --;CREATE INDEX idx_mediciones_valorEnW_m2 ON dw.mediciones(valorEnW_m2)
@@ -296,7 +297,7 @@ CREATE TABLE dw.mediciones2
 , idEstacionDelAnio INT REFERENCES dw.estacionesDelAnio
 , idDiaSemana INT REFERENCES dw.diasSemana
 , idFecha INT REFERENCES dw.fechas
-, idEstacionDeLaRed INT REFERENCES dw.estacionesDeLaRed
+, nomestaciondelared VARCHAR(22) REFERENCES dw.estacionesDeLaRed
 , idMetodo INT REFERENCES dw.metodos
 , idContaminante INT REFERENCES dw.contaminantes
 , surrogate_key INT REFERENCES dw.contaminantescategorias
@@ -312,7 +313,7 @@ CREATE TABLE dw.mediciones2
     , idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     , surrogate_key
@@ -329,7 +330,7 @@ CREATE TABLE dw.mediciones2
     , idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     , surrogate_key
@@ -344,7 +345,7 @@ CREATE TABLE dw.mediciones2
 ;CREATE INDEX idx_mediciones2_idEstacionDelAnio ON dw.mediciones2(idEstacionDelAnio)
 ;CREATE INDEX idx_mediciones2_idDiaSemana ON dw.mediciones2(idDiaSemana)
 ;CREATE INDEX idx_mediciones2_idFecha ON dw.mediciones2(idFecha)
-;CREATE INDEX idx_mediciones2_idEstacionDeLaRed ON dw.mediciones2(idEstacionDeLaRed)
+;CREATE INDEX idx_mediciones2_nomestaciondelared ON dw.mediciones2(nomestaciondelared)
 ;CREATE INDEX idx_mediciones2_idMetodo ON dw.mediciones2(idMetodo)
 ;CREATE INDEX idx_mediciones2_idContaminante ON dw.mediciones2(idContaminante)
 ;CREATE INDEX idx_mediciones2_surrogate_key ON dw.mediciones2(surrogate_key)
@@ -361,7 +362,7 @@ CREATE TABLE dw.mediciones3
   idEstacionDelAnio INT REFERENCES estacionesDelAnio
 , idDiaSemana INT REFERENCES diasSemana
 , idFecha INT REFERENCES fechas
-, idEstacionDeLaRed INT REFERENCES estacionesDeLaRed
+, nomestaciondelared VARCHAR(22) REFERENCES estacionesDeLaRed
 , idMetodo INT REFERENCES metodos
 , idContaminante INT REFERENCES contaminantes
 , idIndustria INT REFERENCES industrias
@@ -371,7 +372,7 @@ CREATE TABLE dw.mediciones3
     idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     , idIndustria
@@ -381,7 +382,7 @@ CREATE TABLE dw.mediciones3
     idEstacionDelAnio
     , idDiaSemana
     , idFecha
-    , idEstacionDeLaRed
+    , nomestaciondelared
     , idMetodo
     , idContaminante
     , idIndustria
@@ -389,7 +390,7 @@ CREATE TABLE dw.mediciones3
 ;CREATE INDEX idx_mediciones3_idEstacionDelAnio ON mediciones3(idEstacionDelAnio)
 ;CREATE INDEX idx_mediciones3_idDiaSemana ON mediciones3(idDiaSemana)
 ;CREATE INDEX idx_mediciones3_idFecha ON mediciones3(idFecha)
-;CREATE INDEX idx_mediciones3_idEstacionDeLaRed ON mediciones3(idEstacionDeLaRed)
+;CREATE INDEX idx_mediciones3_nomestaciondelared ON mediciones3(nomestaciondelared)
 ;CREATE INDEX idx_mediciones3_idMetodo ON mediciones3(idMetodo)
 ;CREATE INDEX idx_mediciones3_idContaminante ON mediciones3(idContaminante)
 ;CREATE INDEX idx_mediciones3_idIndustria ON mediciones3(idIndustria)

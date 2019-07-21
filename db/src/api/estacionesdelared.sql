@@ -5,9 +5,10 @@
 CREATE OR REPLACE VIEW estacionesdelared AS 
  SELECT estacionesdelared.id,
 
-    estacionesdelared.idestaciondelared,
     estacionesdelared.nomestaciondelared,
     estacionesdelared.ubicestaciondelared,
+    estacionesdelared.descestaciondelared,
+    estacionesdelared.idestaciondelared,
     estacionesdelared.idbarrio,
     estacionesdelared.nombarrio,
     estacionesdelared.idccz,

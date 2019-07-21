@@ -17,9 +17,10 @@ CREATE TABLE data.estacionesdelared
 (
   id integer NOT NULL DEFAULT nextval('estacionesdelared_id_seq'::regclass),
 
-  idestaciondelared int,
   nomestaciondelared varchar(22),
   ubicestaciondelared geometry(geometry,32721),
+  descestaciondelared varchar(50),
+  idestaciondelared varchar(3),
   idbarrio int,
   nombarrio varchar(25),
   idccz int,

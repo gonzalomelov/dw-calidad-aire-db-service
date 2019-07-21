@@ -4,12 +4,13 @@
 
 CREATE TABLE staging.mediciones2agrupadas
 (
-  idEstacionDeLaRed INT
+  idEstacionDeLaRed VARCHAR(3)
 , idContaminante INT
 , mean REAL
 , min REAL
 , max REAL
 , percentile REAL
+, description TEXT
 , PRIMARY KEY (
     idEstacionDeLaRed
     , idContaminante
