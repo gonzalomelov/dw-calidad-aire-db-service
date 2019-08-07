@@ -91,6 +91,7 @@ CREATE TABLE dw.estacionesDeLaRed
 , ubicEstacionDeLaRed geometry(Geometry,32721)
 , descestaciondelared VARCHAR(25)
 , idestaciondelared VARCHAR(3)
+, nomidestaciondelared VARCHAR(25)
 , idBarrio INT
 , nomBarrio VARCHAR(25)
 , idCCZ INT

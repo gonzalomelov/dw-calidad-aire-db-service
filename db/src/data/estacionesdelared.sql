@@ -21,6 +21,7 @@ CREATE TABLE data.estacionesdelared
   ubicestaciondelared geometry(geometry,32721),
   descestaciondelared varchar(50),
   idestaciondelared varchar(3),
+  nomidestaciondelared varchar(50),
   idbarrio int,
   nombarrio varchar(25),
   idccz int,

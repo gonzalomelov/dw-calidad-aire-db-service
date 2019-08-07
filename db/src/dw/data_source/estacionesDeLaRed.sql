@@ -1,2 +1,2 @@
-insert into dw.estacionesDeLaRed(nomEstacionDeLaRed, ubicEstacionDeLaRed, descestaciondelared, idestaciondelared, idbarrio, nombarrio, idCCZ, nomCCZ)
-select nomEstacionDeLaRed, ubicEstacionDeLaRed, descEstacionDeLaRed, idEstacionDeLaRed, idbarrio, nombarrio, idCCZ, nomCCZ from data.estacionesDeLaRed;
+insert into dw.estacionesDeLaRed(nomEstacionDeLaRed, ubicEstacionDeLaRed, descestaciondelared, idestaciondelared, nomidestaciondelared, idbarrio, nombarrio, idCCZ, nomCCZ)
+select nomEstacionDeLaRed, ubicEstacionDeLaRed, descEstacionDeLaRed, idEstacionDeLaRed, nomidEstacionDeLaRed, idbarrio, nombarrio, idCCZ, nomCCZ from data.estacionesDeLaRed;

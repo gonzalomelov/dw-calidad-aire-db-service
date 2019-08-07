@@ -9,6 +9,7 @@ CREATE OR REPLACE VIEW estacionesdelared AS
     estacionesdelared.ubicestaciondelared,
     estacionesdelared.descestaciondelared,
     estacionesdelared.idestaciondelared,
+    estacionesdelared.nomidestaciondelared,
     estacionesdelared.idbarrio,
     estacionesdelared.nombarrio,
     estacionesdelared.idccz,
