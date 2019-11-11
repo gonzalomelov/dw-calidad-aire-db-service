@@ -64,6 +64,8 @@ services:
       - db
     network_mode: bridge
     restart: always
+    labels:
+    - traefik.enable=false
 
   # OpenResty (Nginx + Lua) instance that sits in front of PostgREST.
   # All the requests coming into the system are first hitting this component.
@@ -98,6 +100,8 @@ services:
       - postgrest
     network_mode: bridge
     restart: always
+    labels:
+    - traefik.enable=false
 
   # pg-amqp-bridge instance is responsible for forwarding NOTIFY events in PostgreSQL
   # to RabbitMQ based on the BRIDGE_CHANNELS configuration
