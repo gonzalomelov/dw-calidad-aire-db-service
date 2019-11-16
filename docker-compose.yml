@@ -65,7 +65,10 @@ services:
     network_mode: bridge
     restart: always
     labels:
-    - traefik.enable=false
+    - traefik.backend=postgrest
+    - traefik.frontend.rule=Host:postgrest.bieccamvd.com
+    - traefik.docker.network=bridge
+    - traefik.port=3000
 
   # OpenResty (Nginx + Lua) instance that sits in front of PostgREST.
   # All the requests coming into the system are first hitting this component.
