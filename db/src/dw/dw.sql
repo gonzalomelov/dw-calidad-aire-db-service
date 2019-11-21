@@ -130,14 +130,14 @@ CREATE TABLE dw.contaminantes
 
 CREATE TABLE dw.contaminantescategorias
 (
-  surrogate_key SERIAL
+  surrogatekey SERIAL
 , valor INT
 , idContaminante INT REFERENCES dw.contaminantes
 , idRangoContaminantesCategorias INT
 , descRangoContaminantesCategorias VARCHAR(10)
-, PRIMARY KEY (surrogate_key)
+, PRIMARY KEY (surrogatekey)
 )
-;CREATE INDEX idx_contaminantescategorias_surrogate_key ON dw.contaminantescategorias(surrogate_key)
+;CREATE INDEX idx_contaminantescategorias_surrogatekey ON dw.contaminantescategorias(surrogatekey)
 ;
 
 CREATE TABLE dw.radiacionSolarGlobal
@@ -301,7 +301,7 @@ CREATE TABLE dw.mediciones2
 , nomestaciondelared VARCHAR(22) REFERENCES dw.estacionesDeLaRed
 , idMetodo INT REFERENCES dw.metodos
 , idContaminante INT REFERENCES dw.contaminantes
-, surrogate_key INT REFERENCES dw.contaminantescategorias
+, surrogatekey INT REFERENCES dw.contaminantescategorias
 --, valorEnW_m2 INT REFERENCES dw.radiacionSolarGlobal
 --, valorEnPorcentaje INT REFERENCES dw.humedadRelativa
 , valorEnCTemperaturaExterna REAL REFERENCES dw.temperaturaExterna
@@ -317,7 +317,7 @@ CREATE TABLE dw.mediciones2
     , nomestaciondelared
     , idMetodo
     , idContaminante
-    , surrogate_key
+    , surrogatekey
     --, valorEnW_m2
     --, valorEnPorcentaje
     , valorEnCTemperaturaExterna
@@ -334,7 +334,7 @@ CREATE TABLE dw.mediciones2
     , nomestaciondelared
     , idMetodo
     , idContaminante
-    , surrogate_key
+    , surrogatekey
     -- , valorEnW_m2
     -- , valorEnPorcentaje
     , valorEnCTemperaturaExterna
@@ -349,7 +349,7 @@ CREATE TABLE dw.mediciones2
 ;CREATE INDEX idx_mediciones2_nomestaciondelared ON dw.mediciones2(nomestaciondelared)
 ;CREATE INDEX idx_mediciones2_idMetodo ON dw.mediciones2(idMetodo)
 ;CREATE INDEX idx_mediciones2_idContaminante ON dw.mediciones2(idContaminante)
-;CREATE INDEX idx_mediciones2_surrogate_key ON dw.mediciones2(surrogate_key)
+;CREATE INDEX idx_mediciones2_surrogatekey ON dw.mediciones2(surrogatekey)
 --;CREATE INDEX idx_mediciones2_valorEnW_m2 ON dw.mediciones2(valorEnW_m2)
 --;CREATE INDEX idx_mediciones2_valorEnPorcentaje ON dw.mediciones2(valorEnPorcentaje)
 ;CREATE INDEX idx_mediciones2_valorEnCTemperaturaExterna ON dw.mediciones2(valorEnCTemperaturaExterna)
