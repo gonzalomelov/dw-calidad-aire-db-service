@@ -118,11 +118,11 @@ CREATE TABLE dw.contaminantes
 , nomSubTipo VARCHAR(59)
 , idTipo INT
 , nomTipo VARCHAR(23)
-, muybuena INT
-, buena INT
-, aceptable INT
-, inadecuada INT
-, mala INT
+, muybuena REAL
+, buena REAL
+, aceptable REAL
+, inadecuada REAL
+, mala REAL
 , PRIMARY KEY (idContaminante)
 )
 ;CREATE INDEX idx_contaminantes_idContaminante ON dw.contaminantes(idContaminante)
