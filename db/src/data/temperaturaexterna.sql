@@ -17,9 +17,10 @@ CREATE TABLE data.temperaturaexterna
 (
   id integer NOT NULL DEFAULT nextval('temperaturaexterna_id_seq'::regclass),
 
-  valorenc real,
   idrangotemperaturaexterna int,
   descrangotemperaturaexterna varchar(10),
+  min real,
+  max real,
 
   private boolean DEFAULT false,
   owner_id integer DEFAULT request.user_id(),
