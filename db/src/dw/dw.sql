@@ -243,7 +243,7 @@ CREATE TABLE dw.mediciones
 , idContaminante INT REFERENCES dw.contaminantes
 , idRangoRadiacionSolarGlobal INT REFERENCES dw.radiacionSolarGlobal
 , idRangoHumedadRelativa INT REFERENCES dw.humedadRelativa
-, idRangoTemperaturaExternaTemperaturaExterna REAL REFERENCES dw.temperaturaExterna
+, idRangoTemperaturaExternaTemperaturaExterna INT REFERENCES dw.temperaturaExterna
 , idRangoVientoDireccion INT REFERENCES dw.vientoDireccion
 , idRangoVientoVelocidad INT REFERENCES dw.vientoVelocidad
 , idDetector INT REFERENCES dw.camaras
@@ -307,7 +307,7 @@ CREATE TABLE dw.mediciones2
 , surrogatekey INT REFERENCES dw.contaminantescategorias
 , idRangoRadiacionSolarGlobal INT REFERENCES dw.radiacionSolarGlobal
 , idRangoHumedadRelativa INT REFERENCES dw.humedadRelativa
-, idRangoTemperaturaExternaTemperaturaExterna REAL REFERENCES dw.temperaturaExterna
+, idRangoTemperaturaExternaTemperaturaExterna INT REFERENCES dw.temperaturaExterna
 , idRangoVientoDireccion INT REFERENCES dw.vientoDireccion
 , idRangoVientoVelocidad INT REFERENCES dw.vientoVelocidad
 , idDiaImportante INT REFERENCES dw.diasImportantes
