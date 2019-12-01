@@ -1,0 +1,2 @@
+insert into dw.contaminantescategorias(idcontaminante, descRangoContaminantesCategorias)
+select idcontaminante, descRangoContaminantesCategorias from data.contaminantescategorias;

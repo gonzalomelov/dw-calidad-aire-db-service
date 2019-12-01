@@ -5,9 +5,7 @@
 CREATE OR REPLACE VIEW contaminantescategorias AS 
  SELECT contaminantescategorias.id,
 
-    contaminantescategorias.valor,
     contaminantescategorias.idContaminante,
-    contaminantescategorias.idRangoContaminantesCategorias,
     contaminantescategorias.descRangoContaminantesCategorias,
 
     contaminantescategorias.private,

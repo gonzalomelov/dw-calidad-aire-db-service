@@ -131,9 +131,7 @@ CREATE TABLE dw.contaminantes
 CREATE TABLE dw.contaminantescategorias
 (
   surrogatekey SERIAL
-, valor INT
 , idContaminante INT REFERENCES dw.contaminantes
-, idRangoContaminantesCategorias INT
 , descRangoContaminantesCategorias VARCHAR(10)
 , PRIMARY KEY (surrogatekey)
 )
