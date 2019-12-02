@@ -1,0 +1,2 @@
+insert into dw.radiacionsolarglobal(idrangoradiacionsolarglobal, descrangoradiacionsolarglobal, min, max)
+select idrangoradiacionsolarglobal, descrangoradiacionsolarglobal, min, max from data.radiacionsolarglobal;
