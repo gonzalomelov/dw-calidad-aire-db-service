@@ -141,7 +141,7 @@ CREATE TABLE dw.contaminantescategorias
 CREATE TABLE dw.radiacionSolarGlobal
 (
   idRangoRadiacionSolarGlobal INT
-, descRangoRadiacionSolarGlobal VARCHAR(10)
+, descRangoRadiacionSolarGlobal VARCHAR(30)
 , min REAL
 , max REAL
 , PRIMARY KEY (idRangoRadiacionSolarGlobal)
@@ -152,7 +152,7 @@ CREATE TABLE dw.radiacionSolarGlobal
 CREATE TABLE dw.humedadRelativa
 (
   idRangoHumedadRelativa INT
-, descRangoHumedadRelativa VARCHAR(10)
+, descRangoHumedadRelativa VARCHAR(30)
 , min REAL
 , max REAL
 , PRIMARY KEY (idRangoHumedadRelativa)
@@ -163,7 +163,7 @@ CREATE TABLE dw.humedadRelativa
 CREATE TABLE dw.temperaturaExterna
 (
   idRangoTemperaturaExterna INT
-, descRangoTemperaturaExterna VARCHAR(10)
+, descRangoTemperaturaExterna VARCHAR(30)
 , min REAL
 , max REAL
 , PRIMARY KEY (idRangoTemperaturaExterna)
@@ -174,7 +174,7 @@ CREATE TABLE dw.temperaturaExterna
 CREATE TABLE dw.vientoDireccion
 (
   idRangoVientoDireccion INT
-, descRangoVientoDireccion VARCHAR(10)
+, descRangoVientoDireccion VARCHAR(30)
 , min REAL
 , max REAL
 , PRIMARY KEY (idRangoVientoDireccion)
@@ -185,7 +185,7 @@ CREATE TABLE dw.vientoDireccion
 CREATE TABLE dw.vientoVelocidad
 (
   idRangoVientoVelocidad INT
-, descRangoVientoVelocidad VARCHAR(10)
+, descRangoVientoVelocidad VARCHAR(30)
 , min REAL
 , max REAL
 , PRIMARY KEY (idRangoVientoVelocidad)
