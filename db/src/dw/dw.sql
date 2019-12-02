@@ -243,7 +243,7 @@ CREATE TABLE dw.mediciones
 , idContaminante INT REFERENCES dw.contaminantes
 , idRangoRadiacionSolarGlobal INT REFERENCES dw.radiacionSolarGlobal
 , idRangoHumedadRelativa INT REFERENCES dw.humedadRelativa
-, idRangoTemperaturaExternaTemperaturaExterna INT REFERENCES dw.temperaturaExterna
+, idRangoTemperaturaExterna INT REFERENCES dw.temperaturaExterna
 , idRangoVientoDireccion INT REFERENCES dw.vientoDireccion
 , idRangoVientoVelocidad INT REFERENCES dw.vientoVelocidad
 , idDetector INT REFERENCES dw.camaras
@@ -259,7 +259,7 @@ CREATE TABLE dw.mediciones
     , idContaminante
     , idRangoRadiacionSolarGlobal
     , idRangoHumedadRelativa
-    , idRangoTemperaturaExternaTemperaturaExterna
+    , idRangoTemperaturaExterna
     , idRangoVientoDireccion
     , idRangoVientoVelocidad
     , idDetector
@@ -275,7 +275,7 @@ CREATE TABLE dw.mediciones
     , idContaminante
     , idRangoRadiacionSolarGlobal
     , idRangoHumedadRelativa
-    , idRangoTemperaturaExternaTemperaturaExterna
+    , idRangoTemperaturaExterna
     , idRangoVientoDireccion
     , idRangoVientoVelocidad
     , idDetector
@@ -289,7 +289,7 @@ CREATE TABLE dw.mediciones
 ;CREATE INDEX idx_mediciones_idContaminante ON dw.mediciones(idContaminante)
 ;CREATE INDEX idx_mediciones_idRangoRadiacionSolarGlobal ON dw.mediciones(idRangoRadiacionSolarGlobal)
 ;CREATE INDEX idx_mediciones_idRangoHumedadRelativa ON dw.mediciones(idRangoHumedadRelativa)
-;CREATE INDEX idx_mediciones_idRangoTemperaturaExternaTemperaturaExterna ON dw.mediciones(idRangoTemperaturaExternaTemperaturaExterna)
+;CREATE INDEX idx_mediciones_idRangoTemperaturaExterna ON dw.mediciones(idRangoTemperaturaExterna)
 ;CREATE INDEX idx_mediciones_idRangoVientoDireccion ON dw.mediciones(idRangoVientoDireccion)
 ;CREATE INDEX idx_mediciones_idRangoVientoVelocidad ON dw.mediciones(idRangoVientoVelocidad)
 ;CREATE INDEX idx_mediciones_idDetector ON dw.mediciones(idDetector)
@@ -307,7 +307,7 @@ CREATE TABLE dw.mediciones2
 , surrogatekey INT REFERENCES dw.contaminantescategorias
 , idRangoRadiacionSolarGlobal INT REFERENCES dw.radiacionSolarGlobal
 , idRangoHumedadRelativa INT REFERENCES dw.humedadRelativa
-, idRangoTemperaturaExternaTemperaturaExterna INT REFERENCES dw.temperaturaExterna
+, idRangoTemperaturaExterna INT REFERENCES dw.temperaturaExterna
 , idRangoVientoDireccion INT REFERENCES dw.vientoDireccion
 , idRangoVientoVelocidad INT REFERENCES dw.vientoVelocidad
 , idDiaImportante INT REFERENCES dw.diasImportantes
@@ -323,7 +323,7 @@ CREATE TABLE dw.mediciones2
     , surrogatekey
     , idRangoRadiacionSolarGlobal
     , idRangoHumedadRelativa
-    , idRangoTemperaturaExternaTemperaturaExterna
+    , idRangoTemperaturaExterna
     , idRangoVientoDireccion
     , idRangoVientoVelocidad
     , idDiaImportante
@@ -340,7 +340,7 @@ CREATE TABLE dw.mediciones2
     , surrogatekey
     , idRangoRadiacionSolarGlobal
     , idRangoHumedadRelativa
-    , idRangoTemperaturaExternaTemperaturaExterna
+    , idRangoTemperaturaExterna
     , idRangoVientoDireccion
     , idRangoVientoVelocidad
     , idDiaImportante
@@ -355,7 +355,7 @@ CREATE TABLE dw.mediciones2
 ;CREATE INDEX idx_mediciones2_surrogatekey ON dw.mediciones2(surrogatekey)
 ;CREATE INDEX idx_mediciones2_idRangoRadiacionSolarGlobal ON dw.mediciones2(idRangoRadiacionSolarGlobal)
 ;CREATE INDEX idx_mediciones2_idRangoHumedadRelativa ON dw.mediciones2(idRangoHumedadRelativa)
-;CREATE INDEX idx_mediciones2_idRangoTemperaturaExternaTemperaturaExterna ON dw.mediciones2(idRangoTemperaturaExternaTemperaturaExterna)
+;CREATE INDEX idx_mediciones2_idRangoTemperaturaExterna ON dw.mediciones2(idRangoTemperaturaExterna)
 ;CREATE INDEX idx_mediciones2_idRangoVientoDireccion ON dw.mediciones2(idRangoVientoDireccion)
 ;CREATE INDEX idx_mediciones2_idRangoVientoVelocidad ON dw.mediciones2(idRangoVientoVelocidad)
 ;CREATE INDEX idx_mediciones2_idDiaImportante ON dw.mediciones2(idDiaImportante)
