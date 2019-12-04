@@ -1,0 +1,2 @@
+INSERT INTO dw.camaras(iddetector, idcarril, dscavenida, dscintanterior, dscintsiguiente, dscubicacion, ubiccamara)
+select iddetector, idcarril, dscavenida, dscintanterior, dscintsiguiente, dscubicacion, ubiccamara from data.camaras;

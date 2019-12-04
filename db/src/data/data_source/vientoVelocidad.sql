@@ -1,0 +1,14 @@
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (-1, 'ND', null, null);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (0, 'Calma (0 a 2 km/h)', 0, 2);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (1, 'Ventolina (2 a 6 km/h)', 2, 6);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (2, 'Brisa muy débil (6 a 12 km/h)', 6, 12);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (3, 'Brisa ligera (12 a 20 km/h)', 12, 20);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (4, 'Brisa moderada (20 a 29 km/h)', 20, 29);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (5, 'Brisa fresca (29 a 39 km/h)', 29, 39);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (6, 'Brisa fuerte (39 a 50 km/h)', 39, 50);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (7, 'Viento fuerte (50 a 62 km/h)', 50, 62);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (8, 'Viento duro (62 a 75 km/h)', 62, 75);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (9, 'Viento muy duro (75 a 89 km/h)', 75, 89);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (10, 'Temporal (89 a 103 km/h)', 89, 103);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (11, 'Borrasca (103 a 118 km/h)', 103, 118);
+INSERT INTO data.vientovelocidad(idrangovientovelocidad, descrangovientovelocidad, min, max) VALUES (12, 'Haracán (> 118 km/h)', 118, null);
